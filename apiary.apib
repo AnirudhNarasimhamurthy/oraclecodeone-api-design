@@ -8,7 +8,7 @@ Polls is a simple API allowing consumers to view polls and vote in them.
 ## Questions Collection [/questions{?page}]
 
 + Parameter
-    + page: 1 (optional, number) - Page numberery parm
+    + page: 1 (optional, number) - Page number param
 
 ### List All Questions [GET]
 
@@ -35,6 +35,41 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                 ]
             }
         ]
+
+
+## Questions Collection [/questions/{question_id}]
+
++ Parameter
+    + question_id: 1  - Question id param
+
+### List All Questions [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "question": "Favourite programming language?",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "choices": [
+                    {
+                        "choice": "Swift",
+                        "votes": 2048
+                    }, {
+                        "choice": "Python",
+                        "votes": 1024
+                    }, {
+                        "choice": "Objective-C",
+                        "votes": 512
+                    }, {
+                        "choice": "Ruby",
+                        "votes": 256
+                    }
+                ]
+            }
+        ]
+
+
+
 
 ### Create a New Question [POST]
 
